@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Center the loader */
+        #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #0D720D;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 }
+        to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom {
+        from{ bottom:-100px; opacity:0 }
+        to{ bottom:0; opacity:1 }
+        }
+
+        #myDiv {
+        display: none;
+        text-align: center;
+        }
+    </style>
+  <title>Callum's Website</title>
+  <link rel="SHORTCUT ICON" href="https://callumgroeger.com/files/cg-favicon.ico" />
+  <link rel="icon" href="https://callumgroeger.com/files/cg-favicon.ico" type="image/ico" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="./files/css.css" rel="stylesheet" type="text/css" />
+</head>
+  <body>
+
+    <body onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+          <div class="center">
+            <h3>Welcome to <b>Callum Groeger</b></h3>
+            <div class="seperator"></div>
+            <div class="server-container">
+              <div class="top"></div>
+              <div class="server-body online">
+                <div class="drives">
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                </div>
+                <div class="display">
+                  <span class="text">NEXTCLOUD: </span>
+                </div>
+                <span class="light-wrapper">
+                <span class="light-single up blinker2">&nbsp;</span>
+                <span class="light-single down blinker">&nbsp;</span>
+                </span>
+              </div>
+            </div>
+            <div class="server-container">
+              <div class="top"></div>
+              <div class="server-body online">
+                <div class="drives">
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                </div>
+                <div class="display">
+                  <span class="text">CALLUMGROEGER.COM: </span>
+                </div>
+                <span class="light-wrapper">
+                <span class="light-single up blinker2">&nbsp;</span>
+                <span class="light-single down blinker">&nbsp;</span>
+                </span>
+              </div>
+            </div>
+            <div class="server-container">
+              <div class="top"></div>
+              <div class="server-body online">
+                <div class="drives">
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                  <div class="disk">&nbsp;</div>
+                </div>
+                <div class="display">
+                  <span class="text">SPINDEL.ORG: </span>
+                </div>
+                <span class="light-wrapper">
+                <span class="light-single up blinker2">&nbsp;</span>
+                <span class="light-single down blinker">&nbsp;</span>
+                </span>
+              </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="newsbox">
+              <h2>NextCloud at: <a href="https://callumgroeger.com/nextcloud"><img src="files/Nextcloud_Logo.png" alt="NextcloudLogo" style="margin-top:1px;width:75px;height:34px;"></a></h2>
+            </div>
+            <div class="seperator"></div>
+            <div class="infobox">
+              <br>
+              <h3><b>Browse Sections:</b></h3>
+              <p>
+                <a href="index.html"><b>/Home</b></a>
+                <br><a href="about-me.html"><b>/About Me</b></a>
+                <br><a href="projects.html"><b>/Projects</b></a>
+                <br><a href="curriculum-vitea.html"><b>/Curriculum Vitae</b></a>
+                </a>
+              </p>
+              <div class="seperator"></div>
+              <div class="infobox">
+              <br>
+              <h3><b>So...</b> What is this site?</h3>
+              <p><b>This</b> is a small personal website ran by me, <b><a href="mailto:me@callumgroeger.com">Callum</a></b>, dedicated to being a website (it's pretty simple, it'll be honest).<br>
+                <br>
+                Currently this site is a bit sparce but there's a <b><a href="projects.html">Projects</a></b> page.<br>
+                <br>
+                And you can find my with all of your favourite communication methods can be found on the <b><a href="about-me.html">About Me</a></b> page.<br>
+                <br>
+                This is here to stay. But it's probably going to move to a better domain name as this one's a bit clunky!
+                <br>
+                <div class="seperator"></div>
+                <div class="infobox">
+              </p>
+                <h1 class="End">Enjoy!</h2>
+            </div>
+          </div>
+      </div>
+
+
+      <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 750);
+        }
+
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+        }
+      </script>
+  </body>
+</html>
