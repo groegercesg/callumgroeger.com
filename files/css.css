@@ -1,5 +1,5 @@
 body {
-    background: #34495e;
+    background: #166d1d;
     color: #fff;
     font-family: sans-serif
 }
@@ -118,7 +118,7 @@ h3 {
 .newsbox {
     width: 600px;
     margin: 0 auto;
-    border-top: 5px solid #627f9c;
+    border-top: 5px solid #a1d495;
     padding-top: 10px
 }
 a {
