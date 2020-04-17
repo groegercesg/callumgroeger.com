@@ -49,7 +49,7 @@ h3 {
     padding: 2px 1em;
     font-family: monospace;
     font-size: 1em;
-    color: #0D720D;
+    color: #FFF; /* #0D720D */
     border-radius: 0 0 3px 3px;
     border-top: 0
 }
