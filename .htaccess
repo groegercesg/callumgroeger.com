@@ -62,19 +62,19 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     #Header append X-FRAME-OPTIONS "SAMEORIGIN"
     Header set X-Frame-Options "SAMEORIGIN"
     
-    Header set Referrer-Policy: no-referrer-when-downgrade
+    Header set Referrer-Policy "no-referrer-when-downgrade"
     
     # ----------------------------------------------------------------------
     # | Content Security Policy                                            |
     # ----------------------------------------------------------------------   
     
     # Header set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.youtube.com maps.gstatic.com *.googleapis.com *.google-analytics.com cdnjs.cloudflare.com assets.zendesk.com connect.facebook.net; frame-src 'self' *.youtube.com assets.zendesk.com *.facebook.com s-static.ak.facebook.com tautt.zendesk.com; object-src 'self'";
-     Header set Content-Security-Policy "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';"
+     Header set Content-Security-Policy "default-src 'none'; script-src 'nonce-Z2VuZXJhdG9y' 'unsafe-inline' 'strict-dynamic' https: http:;; connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none';  base-uri 'self'; form-action 'none'; require-trusted-types-for 'script'"
 
     # ----------------------------------------------------------------------
     # | Feature Policy                                            |
     # ----------------------------------------------------------------------   
     # After using Feature Policy Tester DevTools Extension:
     # This is experimental so will need to be tweaked in the future
-    Header always set Feature-Policy  "accelerometer 'none'; microphone 'none'; payment 'none'"
+    Header always set Feature-Policy "accelerometer 'none'; microphone 'none'; payment 'none'"
     
