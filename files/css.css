@@ -133,3 +133,8 @@ a {
 .End {
     text-align: center
 }
+img {
+    margin-top: 1px;
+    width: 75px;
+    height: 34px;
+}
