@@ -72,9 +72,16 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
      Header set Content-Security-Policy "default-src 'none'; script-src 'nonce-Z2VuZXJhdG9y' 'unsafe-inline' 'strict-dynamic' https: http:;; connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none';  base-uri 'self'; form-action 'none'; require-trusted-types-for 'script'"
 
     # ----------------------------------------------------------------------
-    # | Feature Policy                                            |
+    # | Feature Policy                                                     |
     # ----------------------------------------------------------------------   
     # After using Feature Policy Tester DevTools Extension:
     # This is experimental so will need to be tweaked in the future
     Header always set Feature-Policy "accelerometer 'none'; microphone 'none'; payment 'none'"
-    
+
+    # ----------------------------------------------------------------------
+    # | Deployment Protection                                              |
+    # ----------------------------------------------------------------------  
+    RedirectMatch 404 /\.git
+    RedirectMatch 404 /\README
+    RedirectMatch 404 /\LICENSE
+
