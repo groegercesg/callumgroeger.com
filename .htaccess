@@ -75,6 +75,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     # | Feature Policy                                            |
     # ----------------------------------------------------------------------   
     # After using Feature Policy Tester DevTools Extension:
-    Header set Feature-Policy: accelerometer 'none'; autoplay 'none'; camera 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; geolocation 'none'; 
-    Feature-Policy: gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; sync-xhr 'none'; usb 'none'; xr-spatial-tracking 'none';
+    # This is experimental so will need to be tweaked in the future
+    Header set Feature-Policy: accelerometer 'none'; autoplay 'none'; camera 'none';
     
