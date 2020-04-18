@@ -69,7 +69,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     # ----------------------------------------------------------------------   
     
     # Header set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.youtube.com maps.gstatic.com *.googleapis.com *.google-analytics.com cdnjs.cloudflare.com assets.zendesk.com connect.facebook.net; frame-src 'self' *.youtube.com assets.zendesk.com *.facebook.com s-static.ak.facebook.com tautt.zendesk.com; object-src 'self'";
-     Header set Content-Security-Policy "default-src 'none'; script-src 'nonce-Z2VuZXJhdG9y' 'unsafe-inline' 'strict-dynamic' https: http:;; connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none';  base-uri 'self'; form-action 'none'; require-trusted-types-for 'script'"
+     Header set Content-Security-Policy "default-src 'none'; script-src 'nonce-Z2VuZXJhdG9y' 'unsafe-inline' 'strict-dynamic' https: http:;; connect-src 'self'; img-src 'self'; style-src 'self'; frame-ancestors 'none';  base-uri 'self'; form-action 'none'"
 
     # ----------------------------------------------------------------------
     # | Feature Policy                                                     |
