@@ -82,6 +82,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     # | Deployment Protection                                              |
     # ----------------------------------------------------------------------  
     RedirectMatch 404 /\.git
-    RedirectMatch 404 /\README
-    RedirectMatch 404 /\LICENSE
+    RedirectMatch 404 LICENSE.md
+    RedirectMatch 404 README.md
+    RedirectMatch 404 .htaccess
 
