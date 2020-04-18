@@ -90,6 +90,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     Feature-Policy: picture-in-picture 'none'
     Feature-Policy: sync-xhr 'none'
     Feature-Policy: usb 'none'
-    Feature-Policy: xr-spatial-tracking 'none'
+    Feature-Policy: xr-spatial-tracking 'none';
 
   
